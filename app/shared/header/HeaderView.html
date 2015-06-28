@@ -7,7 +7,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li ng-repeat="menu in menus">
-                        <a href="#">{{ menu.name }}</a>
+                        <a ng-href="{{ menu.src }}">{{ menu.name }}</a>
                     </li>
                 </ul>
                 <form class="navbar-form navbar-right">
