@@ -1,15 +1,17 @@
 ;(function () {
     'use strict';
 
-    angular.module('ReadApp.Home', ['ngRoute'])
-        .config(['$routeProvider', function($routeProvider) {
+    angular.module('ReadApp')
+        .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/', {
-                templateUrl: 'components/home/HomeView.html',
+                templateUrl: 'app/components/home/HomeView.html',
                 controller: 'HomeController'
             });
         }])
 
-        .controller('HomeController', ['$scope', function ($scope) {
-
+        .controller('HomeController', ['$scope', 'PopularBooksService', function ($scope, PopularBooksService) {
+            PopularBooksService.success(function (data) {
+                $scope.popularBooks = data.popularBooks;
+            });
         }]);
 }());

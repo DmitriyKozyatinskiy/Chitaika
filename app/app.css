@@ -1,0 +1,8 @@
+.Popular {
+    max-height: 200px;
+    overflow-y: hidden;
+}
+
+.Popular__Img {
+    height: 200px !important; /* @TODO change this shit */
+}

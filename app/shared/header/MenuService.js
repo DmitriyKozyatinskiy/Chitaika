@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('ReadApp').factory('MenuService', ['$http', function($http) {
-        return $http.get('mocks/menu.json')
+        return $http.get('app/mocks/menu.json')
             .success(function(data) {
                 return data;
             })

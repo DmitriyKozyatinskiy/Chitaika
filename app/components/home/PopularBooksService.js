@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('ReadApp').factory('PopularBooksService', ['$http', function($http) {
-        return $http.get('mocks/popularBooks.json')
+        return $http.get('app/mocks/popularBooks.json')
             .success(function(data) {
                 return data;
             })
