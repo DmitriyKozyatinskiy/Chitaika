@@ -1,0 +1,7 @@
+<div class="row">
+    <div ng-repeat="popularBook in popularBooks" class="col-xs-3">
+        <a ng-href="#/books/{{ popularBook.id }}" class="thumbnail Popular">
+            <img ng-src="{{ popularBook.src }}" alt="{{ popularBook.name }}" class="Popular__Img">
+        </a>
+    </div>
+</div>
