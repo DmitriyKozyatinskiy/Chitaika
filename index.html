@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="ReadApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Читайка</title>
+
+    <link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app/app.css">
+</head>
+<body>
+    <header></header>
+
+    <main ng-view="homeView">
+
+    </main>
+
+    <footer></footer>
+
+    <script src="app/bower_components/modernizr/modernizr.js"></script>
+    <script src="app/bower_components/angular/angular.js"></script>
+    <script src="app/bower_components/angular-route/angular-route.js"></script>
+    <script src="app/bower_components/angular-route/angular-route.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.routes.js"></script>
+    <script src="app/components/home/HomeController.js"></script>
+</body>
+</html>
