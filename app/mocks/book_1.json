@@ -1,0 +1,8 @@
+{
+  "book": {
+    "name": "Владычица озера",
+    "author": "Анджей Сапковский",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacinia metus id sem finibus eleifend. Nullam dapibus luctus ipsum, et scelerisque neque sodales vel. In hac habitasse platea dictumst. Fusce rutrum ante quis tristique congue. Aenean ex massa, tincidunt sed molestie vitae, auctor et nisl. Maecenas nec quam iaculis, sagittis dui quis, consequat arcu. Quisque placerat lectus non mauris pretium, efficitur ultrices elit finibus.Nullam sed nisi risus. Mauris fringilla eros nec ante suscipit, at laoreet lectus elementum. Aenean posuere finibus arcu quis consequat. Donec enim dolor, tristique vitae leo a, maximus congue mi. Quisque convallis commodo leo, sit amet congue est luctus non. Mauris placerat vitae magna quis mattis. Suspendisse viverra consectetur gravida. Sed vehicula aliquam posuere. Praesent quis eros sed leo semper cursus ac ut tellus. Etiam nec fringilla quam, hendrerit laoreet massa. Suspendisse potenti. Sed id elementum purus, et sagittis nisi. Fusce sodales urna nulla, a varius enim hendrerit eu.",
+    "src": "app/assets/img/vladuchica_ozera.jpg"
+  }
+}

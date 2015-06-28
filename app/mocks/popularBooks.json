@@ -1,30 +1,37 @@
 {
   "popularBooks": [
     {
+      "id": "1",
       "name": "Последнее желание",
       "src": "app/assets/img/poslednee_gelanie.jpg"
     },
     {
+      "id": "1",
       "name": "Кровь эльфов",
       "src": "app/assets/img/krov_elfov.jpg"
     },
     {
+      "id": "1",
       "name": "Меч предназначения",
       "src": "app/assets/img/mech_prednaznacheniya.jpg"
     },
     {
+      "id": "1",
       "name": "Час презрения",
       "src": "app/assets/img/chas_prezreniya.jpg"
     },
     {
+      "id": "1",
       "name": "Крещение огнём",
       "src": "app/assets/img/krechenie_ognem.jpg"
     },
     {
+      "id": "1",
       "name": "Башня ласточки",
       "src": "app/assets/img/bashnya_lastochki.jpg"
     },
     {
+      "id": "1",
       "name": "Владычица озера",
       "src": "app/assets/img/vladuchica_ozera.jpg"
     }
