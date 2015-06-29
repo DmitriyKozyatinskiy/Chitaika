@@ -14,7 +14,6 @@
                     });
             },
             isAuthenticated: function () {
-                console.log(Session.id);
                 return !!Session.id;
             }
         };
