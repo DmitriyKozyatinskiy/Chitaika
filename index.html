@@ -16,7 +16,10 @@
 
     <main class="container">
         <div class="row">
-            <div ng-view class="col-xs-9">
+            <div ng-view class="col-xs-9"></div>
+            <div class="col-xs-3">
+                <ch-sidebar></ch-sidebar>
+            </div>
         </div>
     </main>
 
@@ -30,24 +33,25 @@
     <script src="app/app.routes.js"></script>
 
     <!-- Constants -->
-    <script src="app/components/login/LoginConstants.js"></script>
+    <script src="app/components/authorization/AuthConstants.js"></script>
 
     <!-- Interceptors -->
-    <script src="app/components/login/AuthInterceptor.js"></script>
+    <script src="app/components/authorization/AuthInterceptor.js"></script>
 
     <!-- Services -->
-    <script src="app/components/login/SessionService.js"></script>
-    <script src="app/components/login/LoginService.js"></script>
+    <script src="app/components/authorization/SessionService.js"></script>
+    <script src="app/components/authorization/AuthService.js"></script>
     <script src="app/shared/header/MenuService.js"></script>
     <script src="app/components/home/PopularBooksService.js"></script>
     <script src="app/components/book/BookService.js"></script>
 
     <!-- Directives -->
     <script src="app/shared/header/HeaderDirective.js"></script>
+    <script src="app/shared/sidebar/SidebarDirective.js"></script>
 
     <!-- Controllers -->
     <script src="app/ApplicationController.js"></script>
-    <script src="app/components/login/LoginController.js"></script>
+    <script src="app/components/authorization/AuthController.js"></script>
     <script src="app/components/home/HomeController.js"></script>
     <script src="app/components/book/BookController.js"></script>
     <script src="app/components/account/AccountController.js"></script>

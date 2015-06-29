@@ -1,7 +1,7 @@
 ;(function () {
     'use strict';
 
-    angular.module('ReadApp').factory('LoginService', ['$http', 'Session', function($http, Session) {
+    angular.module('ReadApp').factory('AuthService', ['$http', 'Session', function($http, Session) {
         return {
             login: function (credentials) {
                 return $http

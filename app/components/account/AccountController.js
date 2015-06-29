@@ -13,6 +13,6 @@
         }])
 
         .controller('AccountController', ['$scope', function ($scope) {
-            $scope.user = data.popularBooks;
+            //$scope.user = data.popularBooks;
         }]);
 }());
