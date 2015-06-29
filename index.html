@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/">
     <title>Читайка</title>
 
     <link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.css">
@@ -13,9 +14,7 @@
 <body>
     <ch-header></ch-header>
 
-    <main ng-view class="container">
-
-    </main>
+    <main ng-view class="container"></main>
 
     <footer></footer>
 
@@ -26,7 +25,15 @@
     <script src="app/app.module.js"></script>
     <script src="app/app.routes.js"></script>
 
+    <!-- Constants -->
+    <script src="app/components/login/LoginConstants.js"></script>
+
+    <!-- Interceptors -->
+    <script src="app/components/login/AuthInterceptor.js"></script>
+
     <!-- Services -->
+    <script src="app/components/login/SessionService.js"></script>
+    <script src="app/components/login/LoginService.js"></script>
     <script src="app/shared/header/MenuService.js"></script>
     <script src="app/components/home/PopularBooksService.js"></script>
     <script src="app/components/book/BookService.js"></script>
@@ -35,8 +42,9 @@
     <script src="app/shared/header/HeaderDirective.js"></script>
 
     <!-- Controllers -->
+    <script src="app/components/login/LoginController.js"></script>
     <script src="app/components/home/HomeController.js"></script>
     <script src="app/components/book/BookController.js"></script>
-    <script src="app/components/sign-in/SignInController.js"></script>
+    <script src="app/components/account/AccountController.js"></script>
 </body>
 </html>

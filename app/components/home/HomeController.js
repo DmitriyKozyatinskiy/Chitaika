@@ -5,7 +5,10 @@
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/', {
                 templateUrl: 'app/components/home/HomeView.html',
-                controller: 'HomeController'
+                controller: 'HomeController',
+                access: {
+                    requiresLogin: false
+                }
             });
         }])
 

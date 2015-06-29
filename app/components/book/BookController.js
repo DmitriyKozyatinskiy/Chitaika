@@ -5,7 +5,10 @@
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/books/:bookId', {
                 templateUrl: 'app/components/book/BookView.html',
-                controller: 'BookController'
+                controller: 'BookController',
+                access: {
+                    requiresLogin: true
+                }
             });
         }])
 

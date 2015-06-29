@@ -2,11 +2,11 @@
   "menus": [
     {
       "name": "Вход",
-      "src": "#/sign-in"
+      "src": "/login"
     },
     {
       "name": "Регистрация",
-      "src": "#/sign-up"
+      "src": "/sign-up"
     }
   ]
 }
