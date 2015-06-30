@@ -1,5 +1,5 @@
 <div ng-controller="AuthController">
-    <form method="POST" ng-submit="login(credentials)">
+    <form ng-if="!isAuthorized()" method="POST" ng-submit="login(credentials)">
         <div class="form-group">
             <label for="sign-in-email">E-Mail</label>
             <input ng-model="user.email" type="email" class="form-control" id="sign-in-email" placeholder="user@gmail.com">
