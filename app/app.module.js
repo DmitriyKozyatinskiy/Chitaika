@@ -11,7 +11,13 @@
             };
 
             $rootScope.$on('$routeChangeStart', function (event, next) {
-                var isAllowed = !next.$$route.access.requiresLogin || AuthService.isAuthenticated();
+                var isAllowed;
+
+                try {
+                    isAllowed = !next.$$route.access.requiresLogin || AuthService.isAuthenticated();
+                } catch (e) {
+                    isAllowed = true;
+                }
 
                 if (!isAllowed) {
                     event.preventDefault();

@@ -4,17 +4,18 @@
     angular.module('ReadApp')
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/books/:bookId', {
-                templateUrl: 'app/components/book/BookView.html',
-                controller: 'BookController',
+                templateUrl: 'app/components/books/BooksView.html',
+                controllerAs: 'book',
+                controller: function () {},
                 access: {
                     requiresLogin: true
                 }
             });
         }])
 
-        .controller('BookController', ['$scope', '$routeParams', 'BookService', function ($scope, $routeParams, BookService) {
+        .controller('BookController', ['$routeParams', 'BooksService', function ($scope, $routeParams, BookService) {
             BookService($routeParams.bookId).success(function (data) {
-                $scope.book = data.book;
+                this.book = data.book;
             });
         }]);
 }());

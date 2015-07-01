@@ -6,6 +6,7 @@
             $routeProvider.when('/', {
                 templateUrl: 'app/components/home/HomeView.html',
                 controller: 'HomeController',
+                controllerAs: 'home',
                 access: {
                     requiresLogin: false
                 }
@@ -13,8 +14,11 @@
         }])
 
         .controller('HomeController', ['$scope', 'PopularBooksService', function ($scope, PopularBooksService) {
+            var vm = this;
+
             PopularBooksService.success(function (data) {
-                $scope.popularBooks = data.popularBooks;
+                vm.popularBooks = data.popularBooks;
+                console.log(vm.popularBooks);
             });
         }]);
 }());
