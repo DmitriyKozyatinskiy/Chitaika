@@ -7,5 +7,5 @@
         loginFailed: 'auth-login-failed',
         logoutSuccess: 'auth-logout-success',
         notAuthenticated: 'auth-not-authenticated'
-    })
+    });
 }());

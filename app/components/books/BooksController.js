@@ -5,17 +5,18 @@
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/books/:bookId', {
                 templateUrl: 'app/components/books/BooksView.html',
-                controllerAs: 'book',
-                controller: function () {},
+                controller: 'BooksController',
+                controllerAs: 'books',
                 access: {
-                    requiresLogin: true
+                    requiresLogin: false
                 }
             });
         }])
+        .controller('BooksController', ['$routeParams', 'BooksService', function ($routeParams, BooksService) {
+            var vm = this;
 
-        .controller('BookController', ['$routeParams', 'BooksService', function ($scope, $routeParams, BookService) {
-            BookService($routeParams.bookId).success(function (data) {
-                this.book = data.book;
+            BooksService($routeParams.bookId).success(function (data) {
+                vm.book = data.book;
             });
         }]);
 }());

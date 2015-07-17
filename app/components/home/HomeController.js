@@ -12,13 +12,11 @@
                 }
             });
         }])
-
-        .controller('HomeController', ['$scope', 'PopularBooksService', function ($scope, PopularBooksService) {
+        .controller('HomeController', ['PopularBooksService', function (PopularBooksService) {
             var vm = this;
 
             PopularBooksService.success(function (data) {
                 vm.popularBooks = data.popularBooks;
-                console.log(vm.popularBooks);
             });
         }]);
 }());

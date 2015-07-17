@@ -16,5 +16,15 @@
                     $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
                 });
             };
+
+            this.logout = function () {
+                AuthService.logout();
+                /** @TODO move it to deferred */
+                $rootScope.$broadcast(AUTH_EVENTS.logoutSuccess);
+            };
+
+            this.isAuthed = function () {
+                return AuthService.isAuthenticated();
+            };
         }]);
 }());

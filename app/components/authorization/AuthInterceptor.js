@@ -3,8 +3,8 @@
 
     angular.module('ReadApp').config(function ($httpProvider) {
         $httpProvider.interceptors.push(['$injector', function ($injector) {
-                return $injector.get('AuthInterceptor');
-            }
+            return $injector.get('AuthInterceptor');
+        }
         ]);
     })
         .factory('AuthInterceptor', function ($rootScope, $q, AUTH_EVENTS) {

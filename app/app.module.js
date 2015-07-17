@@ -1,9 +1,7 @@
 ;(function () {
     'use strict';
 
-    angular.module('ReadApp', [
-        'ngRoute'
-    ])
+    angular.module('ReadApp', ['ngRoute'])
         .run(['$rootScope', 'AUTH_EVENTS', 'AuthService', function ($rootScope, AUTH_EVENTS, AuthService) {
             $rootScope.currentUser = null;
             $rootScope.setCurrentUser = function (user) {

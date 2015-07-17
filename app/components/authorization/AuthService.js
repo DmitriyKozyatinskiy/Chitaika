@@ -13,6 +13,11 @@
                         return user;
                     });
             },
+
+            logout: function () {
+                Session.destroy();
+            },
+
             isAuthenticated: function () {
                 return !!Session.id;
             }
