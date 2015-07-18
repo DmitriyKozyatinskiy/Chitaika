@@ -12,6 +12,10 @@
                 $rootScope.currentUser = user;
             };
 
+            $rootScope.$on(AUTH_EVENTS.logoutSuccess, function () {
+                $rootScope.currentUser = null;
+            });
+
             $rootScope.$on('$routeChangeStart', function (event, next) {
                 var isAllowed;
 

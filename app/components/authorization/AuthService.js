@@ -22,8 +22,9 @@
                 return $http
                     .get('/app/mocks/logout.json')
                     .then(function (response) {
-                        if (response.status) {
+                        if (response.data.status) {
                             Session.destroy();
+                            $rootScope.$broadcast(AUTH_EVENTS.logoutSuccess);
                         }
                     }, function () {
                         $rootScope.$broadcast(AUTH_EVENTS.logoutFailed);
