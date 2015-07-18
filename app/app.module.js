@@ -1,7 +1,11 @@
 ;(function () {
     'use strict';
 
-    angular.module('ReadApp', ['ngRoute'])
+    angular.module('underscore', []).factory('_', ['$window', function() {
+        return $window._;
+    }]);
+
+    angular.module('ReadApp', ['ngRoute', 'underscore'])
         .run(['$rootScope', 'AUTH_EVENTS', 'AuthService', function ($rootScope, AUTH_EVENTS, AuthService) {
             $rootScope.currentUser = null;
             $rootScope.setCurrentUser = function (user) {
