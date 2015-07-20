@@ -1,8 +1,8 @@
 ;(function () {
     'use strict';
 
-    angular.module('ReadApp').factory('MenuService', ['$http', function($http) {
-        return $http.get('app/mocks/menu.json')
+    angular.module('ReadApp').factory('SearchService', ['$http', function($http) {
+        return $http.get('app/mocks/searchResult.json')
             .success(function(response) {
                 return response;
             })

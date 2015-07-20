@@ -1,0 +1,19 @@
+{
+  "data": [
+      {
+      "id": "1",
+      "name": "Последнее желание",
+      "src": "app/assets/img/poslednee_gelanie.jpg"
+    },
+    {
+      "id": "1",
+      "name": "Кровь эльфов",
+      "src": "app/assets/img/krov_elfov.jpg"
+    },
+    {
+      "id": "1",
+      "name": "Меч предназначения",
+      "src": "app/assets/img/mech_prednaznacheniya.jpg"
+    }
+  ]
+}

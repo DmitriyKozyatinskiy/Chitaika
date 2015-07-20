@@ -7,13 +7,13 @@
             login: function (credentials) {
                 return $http
                     .get('/app/mocks/users.json')
-                    .then(function (response) {
+                    .success(function (response) {
                         var user = response.data.user;
 
                         Session.create(user);
                         $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
                         $rootScope.setCurrentUser(user);
-                    }, function () {
+                    }).error(function () {
                         $rootScope.$broadcast(AUTH_EVENTS.loginFailed);
                     });
             },
@@ -21,12 +21,12 @@
             logout: function () {
                 return $http
                     .get('/app/mocks/logout.json')
-                    .then(function (response) {
+                    .success(function (response) {
                         if (response.data.status) {
                             Session.destroy();
                             $rootScope.$broadcast(AUTH_EVENTS.logoutSuccess);
                         }
-                    }, function () {
+                    }).error(function () {
                         $rootScope.$broadcast(AUTH_EVENTS.logoutFailed);
                     });
             },

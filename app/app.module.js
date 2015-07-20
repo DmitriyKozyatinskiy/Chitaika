@@ -6,14 +6,21 @@
     }]);
 
     angular.module('ReadApp', ['ngRoute', 'underscore'])
-        .run(['$rootScope', 'AUTH_EVENTS', 'AuthService', function ($rootScope, AUTH_EVENTS, AuthService) {
+        .run(['$rootScope', '$route', '$location', 'AUTH_EVENTS', 'AuthService', function ($rootScope, $route, $location, AUTH_EVENTS, AuthService) {
             $rootScope.currentUser = null;
+
             $rootScope.setCurrentUser = function (user) {
                 $rootScope.currentUser = user;
             };
 
             $rootScope.$on(AUTH_EVENTS.logoutSuccess, function () {
+                var requiresLogin = $route.current.$$route.access.requiresLogin;
+
                 $rootScope.currentUser = null;
+
+                if (requiresLogin) {
+                    $location.path('/');
+                }
             });
 
             $rootScope.$on('$routeChangeStart', function (event, next) {

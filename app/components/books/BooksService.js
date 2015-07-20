@@ -4,8 +4,8 @@
     angular.module('ReadApp').factory('BooksService', ['$http', function($http) {
         return function(bookId) {
             return $http.get('app/mocks/book_' + bookId +'.json')
-                .success(function(data) {
-                    return data;
+                .success(function(response) {
+                    return response;
                 })
                 .error(function(err) {
                     return err;
